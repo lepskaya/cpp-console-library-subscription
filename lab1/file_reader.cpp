@@ -4,6 +4,7 @@
 #include <fstream>
 #include <cstring>
 
+
 void read(const char* file_name, speed* array[], int& size)
 {
 	std::ifstream file(file_name);
@@ -14,14 +15,17 @@ void read(const char* file_name, speed* array[], int& size)
 		while (!file.eof())
 		{
 			speed* item = new speed;
+			file >> item->DateWind.day;
+			file >> item->DateWind.month;
 			file >> item->wind.direction_wind;
 			file >> item->speed_wind;
+
 			array[size++] = item;
 		}
 		file.close();
 	}
 	else
 	{
-		throw " Ошибка";
+		throw "  ";
 	}
 }

@@ -18,6 +18,7 @@ struct speed
 {
 	double speed_wind;
 	direction wind;
+	date DateWind;
 };
 
 #endif
