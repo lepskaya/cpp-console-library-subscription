@@ -7,23 +7,17 @@ struct date
 {
 	int day;
 	int month;
-	int year;
 };
 
-struct person
+struct direction
 {
-	char first_name[MAX_STRING_SIZE];
-	char middle_name[MAX_STRING_SIZE];
-	char last_name[MAX_STRING_SIZE];
+	char direction_wind[MAX_STRING_SIZE];
 };
 
-struct book_subscription
+struct speed
 {
-	person reader;
-	date start;
-	date finish;
-	person author;
-	char title[MAX_STRING_SIZE];
+	double speed_wind;
+	direction wind;
 };
 
 #endif
